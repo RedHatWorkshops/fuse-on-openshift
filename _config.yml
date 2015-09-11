@@ -20,7 +20,7 @@ description: "»Feeling Responsive« is a responsive theme for Jekyll based on t
 
 # Main author of the website
 # See > authors.yml
-author: phlow
+author: ceposta
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
@@ -49,7 +49,7 @@ paginate: 5
 
 
 # Pagination path › Important for blog page in /blog/ to work
-paginate_path: "blog/page:num"
+paginate_path: "labs/page:num"
 
 
 # Theme works best with Kramdown (using the table of contents function)
