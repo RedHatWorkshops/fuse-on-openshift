@@ -16,7 +16,7 @@ slogan: "JBoss Fuse on OpenShift v3"
 
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
-description: "»Feeling Responsive« is a responsive theme for Jekyll based on the fabulous foundation framework with beautiful typography and a bright color palette."
+description: "OpenShift is a open-source developer PaaS that builds on native Docker and Kubernetes. This workshop demonstrates integrating microservices that can be deployed using Docker onto OpenShift. The workshops are delivered live, but you can use this content offline as well."
 
 # Main author of the website
 # See > authors.yml
@@ -29,7 +29,7 @@ baseurl: ''
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages
-improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
+improve_content: https://github.com/RedHatWorkshops/fuse-on-openshift
 
 # This URL points directly to the images directory making
 # things easier to link to images in posts and templates. It needs a slash at the end.

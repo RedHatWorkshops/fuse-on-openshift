@@ -37,6 +37,12 @@ Once you've downloaded the distribution, you can run the installer by either dou
 
 Follow the on-screen instructions to complete the installations.
 
+## Fire up JBDS
+Click the icon that was just installed on your system to fire up JBDS. You will first be greeted with a screen to select the location for your workspace. Choose a location on your system for where our Java projects will go:
+
+![Workspace](/images/jbds-install/workspace.png)
+
+
 ### Install the integration pack
 
 The Fuse tools are part of the integration pack, that you can install by selecting the "Software/Update" tab and choose "JBoss Fuse Development". Then follow the on-screen instructions to install the tools.  
