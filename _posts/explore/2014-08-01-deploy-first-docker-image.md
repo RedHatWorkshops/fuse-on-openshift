@@ -10,7 +10,7 @@ categories:
     - explore
 ---
 
-###** Background: Containers and Pods **
+### Background: Containers and Pods
 
 Before we start digging in we need to understand how containers and pods are
 related. Given the morning sessions where we discussed the OpenShift platform
@@ -75,7 +75,7 @@ to space considerations of this workshop manual):
                 "name": "smoke"
             },...............
             
-###** Exercise 1: Deploying your first Image **
+### Exercise 1: Deploying your first Image 
 
 Let's start by doing the simplest thing possible - get a plain old Docker image
 to run inside of OpenShift. This is incredibly simple to do. We are going to use
@@ -174,7 +174,7 @@ dockerfile](https://docs.openshift.com/enterprise/3.0/admin_guide/manage_scc.htm
 EXPOSEd port in the Docker image.  If additional Services are required, you can
 always create them using the *oc expose* command.
 
-####** Background: Services **
+#### Background: Services 
 
 You can see that when we ran the *new-app* command, OpenShift actually created
 several resources behind the scenes in order to handle deploying this Docker

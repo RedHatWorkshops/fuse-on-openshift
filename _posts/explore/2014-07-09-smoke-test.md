@@ -56,7 +56,7 @@ your authorization token will last for 24 hours. There is more information about
 the login command and its configuration in the [OpenShift Enterprise Documentation](https://docs.openshift.com/enterprise/3.0/cli_reference/get_started_cli.html#basic-setup-and-login).
 
     
-###**Using a project**
+### Using a project
 
 Projects are a top level concept to help you organize your deployments. An
 OpenShift project allows a community of users (or a user) to organize and manage
@@ -99,7 +99,7 @@ You should see output similar to the following:
     NAME      HOST/PORT                                                     PATH      SERVICE   LABELS      TLS TERMINATION
     smoke     smoke.user36-smoke.cloudapps.chicago.openshift3roadshow.com             smoke     app=smoke 
 
-###**The Web Console**
+### The Web Console
 
 OpenShift Enterprise 3 ships with a web-based console that will allow users to
 perform various tasks via a browser.  To get a feel for how the web console

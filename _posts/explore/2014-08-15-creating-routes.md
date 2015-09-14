@@ -10,7 +10,7 @@ categories:
     - explore
 ---
 
-###** Background: Routes **
+### Background: Routes 
 
 By default, the *new-app* command does not expose the Service it creates to the
 outside world. If you want expose a service as an HTTP endpoint you can easily
@@ -19,7 +19,7 @@ determine where to proxy the incoming request. You can optionally define
 security, such as TLS, for the route. If you want your Pods to be accessible to
 the outside world, you need to create a route.
 
-####**Exercise 2: Creating a route**
+#### Exercise 2: Creating a route
 
 Fortunately, creating a Route is a pretty straight-forward process.  You simply
 expose the Service. First we want to verify that we don't already have any
