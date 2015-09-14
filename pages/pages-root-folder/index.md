@@ -19,9 +19,9 @@ widget2:
   image: 'fuse.png'
 widget3:
   title: "Download Materials"
-  url: 'https://github.com/Phlow/feeling-responsive'
+  url: '/download/'
   image: download.jpg
-  text: 'The in-person workshop will have the options to run locally or in a public deployment of OpenShift v3, but for offline labs, please download the requisite material'
+  text: 'The <a href="/workshop-locations/">in-person workshop</a> will have the options to run locally or in a public deployment of OpenShift v3, but for offline labs, please download the requisite material'
 permalink: /index.html
 ---
 

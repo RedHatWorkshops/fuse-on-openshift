@@ -2,12 +2,12 @@
   url: "/"
   side: left
 
-- title: Live workshop locations
-  url: "/workshop-locations/"
+- title: Getting Started
+  url: "/getting-started/getting-started-with-the-labs/"
   side: left
 
-- title: Getting Started
-  url: "/getting-started/"
+- title: Live workshop locations
+  url: "/workshop-locations/"
   side: left
 
 - title: All Labs
