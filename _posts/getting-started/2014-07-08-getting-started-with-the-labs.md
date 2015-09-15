@@ -29,7 +29,7 @@ To install JBoss Developer Studio (JBDS), first download the distribution approp
 
 Stand-alone installer
 
-![Standalone installer](/images/jbds-install/jbds-table.png)
+![Standalone installer]({{ site.url }}/images/jbds-install/jbds-table.png)
 
 Once you've downloaded the distribution, you can run the installer by either double-clicking the jar in your file-system explorer, or you can run from the command line (make sure `JAVA_HOME` environment variable is set):
 
