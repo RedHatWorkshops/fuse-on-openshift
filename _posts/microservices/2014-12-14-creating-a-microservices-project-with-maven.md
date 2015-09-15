@@ -113,7 +113,7 @@ You should see something like this in the console:
     
 Note, the log line that says the route is bound to port `9091` We can try to hit that URL in our browser or with curl:
 
-    curl -s https://localhost:9091
+    curl -s https://postamac.local:9091
     
     
 We should see "hello" returned
