@@ -1,50 +1,20 @@
+# Fuse on OpenShift v3!
 
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-1280x720.jpg)](https://www.youtube.com/embed/3b5zCFSmVvU)
+Welcome to the Fuse on OpenShift v3 workshop series! We will be on the road -- coming to these locations really soon!
 
-## A Responsive Jekyll Theme: *Feeling Responsive*
+* Boston -- September 17, 2015
+* NYC -- September 23, 2015
+* Los Angeles -- September 29, 2015 
+* San Jose -- October 6, 2015
+* Montreal -- November 3, 2015
+* Chicago -- December 8, 2015
 
-Do you want to get to know *Feeling Responsive*? Than check it out first and have a look on its home at  <http://phlow.github.io/feeling-responsive/>.
+[Register for the in-person workshops][schedule]!
 
-To get to know *Feeling Responsive* check out all the features explained in the [documentation][1].
+## What's in this repo
+This repo hosts the workshop guides for the in-person workshop. You don't have to attend to be able to use this material, though, as all of it will work on the vagrant images as well. 
 
-And what license is *Feeling Responsive* released under? [This one][2].
-
-
-
-## Why use this theme?
-
-Feeling Responsive is heavily customizable.
-
-1. Language-Support :)
-2. Optimized for speed and it's responsive.
-3. Built on Foundation Framework.
-4. Six different Headers.
-5. Customizable navigation, footer,...
-
-**[More ›][3]**
+To see this website live, please navigate to [http://redhatworkshops.github.io/fuse-on-openshift](http://redhatworkshops.github.io/fuse-on-openshift)
 
 
-
-## Video Tutorial
-
-Click the image to [watch the YouTube-Video-Tutorial][4].
-
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-tutorial-frontpage.jpg)](https://www.youtube.com/watch?v=rLS-BEvlEyY)
-
-
-
-
-
-
-
-
- [1]: http://phlow.github.io/feeling-responsive/documentation/
- [2]: https://github.com/Phlow/feeling-responsive/blob/gh-pages/LICENSE
- [3]: http://phlow.github.io/feeling-responsive/info/
- [4]: https://www.youtube.com/watch?v=rLS-BEvlEyY
- [5]: #
- [6]: #
- [7]: #
- [8]: #
- [9]: #
- [10]: #
+[schedule]: http://www.meeting-reg.com/redhat/jboss_2015/index.php?sc_cid=70160000000wtejAAA
