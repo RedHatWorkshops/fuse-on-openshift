@@ -45,7 +45,7 @@ Verify the route was created with the following command:
 	$ oc get routes
 
     NAME        HOST/PORT      
-    guestbook   guestbook.userXX-guestbook.cloudapps.test.openshift3roadshow.com
+    guestbook   guestbook.userXX-guestbook.apps.fuse.osecloud.com
 
 You can also verify the route by looking at the project in OpenShift web console:
 

@@ -91,7 +91,7 @@ Remember that Projects group resources together. Ensure that you replace
 The *new-project* command will automatically switch you to use that Project. You
 will see something like the following:
 
-    Now using project "user36-guestbook" on server "https://openshift-master.chicago.openshift3roadshow.com:8443".
+    Now using project "user36-guestbook" on server "https://master.fuse.osecloud.com:8443".
 
 To see all the Projects you have access to, you can simply use *oc get*.
 

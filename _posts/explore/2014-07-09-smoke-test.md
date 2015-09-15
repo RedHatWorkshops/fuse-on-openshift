@@ -13,7 +13,7 @@ categories:
 
 The first thing we want to do to ensure that our *oc* command line tools was installed and successfully added to our path is login to the OpenShift Enterprise 3.0 environment that has been provided for this Roadshow session.  In order to login, we will use the *oc* command and then specify the server that we want to authenticate to.  Issue the following command:
 
-	$ oc login openshift-master.CITYNAME.openshift3roadshow.com
+	$ oc login master.fuse.osecloud.com
     
 **Note:** Ensure that you replace *CITYNAME* with the correct hostname / city for your location.  This information was provided to you by the instructor of this workshop.
 
@@ -34,7 +34,7 @@ corporate-standard CA that you already have installed on your system.
 
 **Note:** On some versions of Microsoft Windows, you may get an error that the server has an invalid x.509 certificate.  If you receive this error, enter in the following command:
 
-	$ oc login master.test.openshift3roadshow.com --insecure-skip-tls-verify=true
+	$ oc login master.fuse.osecloud.com --insecure-skip-tls-verify=true
     
 Once you issue the *oc login* command, you will be prompted for the username and password combination for your user account.  This information was provided to you by the instructor of this workshop:
 
@@ -82,7 +82,7 @@ can do this with the following command:
    
 You will see the following confirmation message:
 
-	Now using project "userXX-smoke" on server "https://openshift-master.CITYNAME.openshift3roadshow.com:8443".
+	Now using project "userXX-smoke" on server "https://master.fuse.osecloud.com:8443".
 
 The next thing we want to check is the routes associated with this project. A simple explanation for how routes work is:
 1. A request comes in to an OpenShift node on port 80 (HTTP) or 443 (HTTPS)
@@ -105,7 +105,7 @@ OpenShift Enterprise 3 ships with a web-based console that will allow users to
 perform various tasks via a browser.  To get a feel for how the web console
 works, open your browser and go to the following URL:
 
-	https://openshift-master.CITYNAME.openshift3roadshow.com:8443
+	https://master.fuse.osecloud.com:8443
 
 The first screen you will see is the authentication screen.  Enter in the following credentials:
 
