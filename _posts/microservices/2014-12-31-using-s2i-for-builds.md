@@ -14,8 +14,8 @@ To deploy our microservice with OpenShift using s2i, we'll want to first add it 
 
 First, create a new repo in github.com called "camel-rest-workshop"
 
-![Create project](/images/microservices/newgithubproject.png)
-![Import code](/images/microservices/howtoimportgithub.png)
+![Create project]({{ site.url }}/images/microservices/newgithubproject.png)
+![Import code]({{ site.url }}/images/microservices/howtoimportgithub.png)
 
 Now we need to push this code up to github.com. Let's navigate to the command line and to the folder that has our camel-rest-service microservice and run:
 

@@ -40,15 +40,15 @@ Next, we'll want to "import" the project into JBDS.
 
 Click File->Import and that should take you to a dialog. Enter "Existing" into the filter and you should see "Existing Maven project" in the list:
 
-![Existing](/images/fuse/import-existing.png)
+![Existing]({{ site.url }}/images/fuse/import-existing.png)
 
 Select "Existing Maven project" and then you can navigate to an existing project (ie, the Maven project we just cloned from github.com) and import it by clicking the "Browse" button and finding it on the file system
 
-![Select](/images/fuse/select-project.png)
+![Select]({{ site.url }}/images/fuse/select-project.png)
 
 Once you've imported it, you should have it in the workspace:
 
-![success](/images/fuse/success.png)
+![success]({{ site.url }}/images/fuse/success.png)
 
 
 ### Clone the project using JBDS
@@ -56,22 +56,22 @@ Alternatively, you can clone the project and import it all in one go with JBDS. 
 
 Click File->Import and type in "maven" into the filter. You should se an option to select an existing project from SCM:
 
-![import git](/images/fuse/import-git.png)
+![import git]({{ site.url }}/images/fuse/import-git.png)
 
 Then you can input the correct URL to your git repo and click `Finish` or click Next to choose a location to clone into:
 
-![Git URI](/images/fuse/git-uri.png)
+![Git URI]({{ site.url }}/images/fuse/git-uri.png)
 
 You should now have the sample Fuse project correctly imported into the workspace. 
 
 ### Building the project
 Now that you've got the project checked out, let's build it and make sure Maven can build it correctly:
 
-![build](/images/fuse/build.png)
+![build]({{ site.url }}/images/fuse/build.png)
 
 At the end of the build, if everything built correctly, you should see a "Build Success" message like below:
 
-![build](/images/fuse/build-success.png)
+![build]({{ site.url }}/images/fuse/build-success.png)
 
 
 [fork]: https://github.com/RedHatWorkshops/camel-hello-world/fork

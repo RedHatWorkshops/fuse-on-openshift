@@ -20,25 +20,25 @@ Navigate to the console, and login (the URL will be provided for the in-person w
 
 Click on the "Add to Project" button:
 
-![add to project](/images/fuse/addtoproject.png)
+![add to project]({{ site.url }}/images/fuse/addtoproject.png)
 
 
 We should now see a list of templates and instant apps. Select the fuse instant app to continue deploying our fuse app:
 
-![insta-app](/images/fuse/instantapp.png)
+![insta-app]({{ site.url }}/images/fuse/instantapp.png)
 
 Yay! Now we can edit some variables, like the git repo, and the name of the project if you wish. Click the "edit" link:
 
-![insta-app](/images/fuse/editparams.png)
+![insta-app]({{ site.url }}/images/fuse/editparams.png)
 
 
 And now click create!
 
-![insta-app](/images/fuse/create.png)
+![insta-app]({{ site.url }}/images/fuse/create.png)
 
 Now, off to the left, find the "Browse" icon and click it. You may need to click on "Pods" as well if that's not the default page that shows up. You should see a builder pod building the newly created `camel-hello-world` instant app:
 
-![insta-app](/images/fuse/buildrunning.png)
+![insta-app]({{ site.url }}/images/fuse/buildrunning.png)
 
 To see the current status of the build, and view it's logs to verify it's coming along, let's go back to the command line and type the following:
 

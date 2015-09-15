@@ -16,14 +16,14 @@ This lab will walk you through setting up a maven project that we will use to bu
 
 First, let's create the project using JBDS (though creating the archetype project can also be done from the command line). Click to File->New, and select "Maven project". If you don't see "Maven Project" let's click "Other" and type "maven" into the filter box. 
 
-![choose new](/images/microservices/newmvnproject.png)
+![choose new]({{ site.url }}/images/microservices/newmvnproject.png)
 
 On the next screen, give a project name, and configure any other project-location details you'd like. Leave the "Create simple project" checkbox **unchecked**. Then click next. 
 
 In the "New Maven project" screen, enter the following into the filter: `io.fabric8.archetypes` and select `java-camel-cdi-archetype`
 
 
-![choose new](/images/microservices/archselection.png)
+![choose new]({{ site.url }}/images/microservices/archselection.png)
 
 Give it the maven coordinates:
 

@@ -40,14 +40,14 @@ Follow the on-screen instructions to complete the installations.
 ## Fire up JBDS
 Click the icon that was just installed on your system to fire up JBDS. You will first be greeted with a screen to select the location for your workspace. Choose a location on your system for where our Java projects will go:
 
-![Workspace](/images/jbds-install/workspace.png)
+![Workspace]({{ site.url }}/images/jbds-install/workspace.png)
 
 
 ### Install the integration pack
 
 The Fuse tools are part of the integration pack, that you can install by selecting the "Software/Update" tab and choose "JBoss Fuse Development". Then follow the on-screen instructions to install the tools.  
 
-![Choose Fuse](/images/jbds-install/choosefuse.png)
+![Choose Fuse]({{ site.url }}/images/jbds-install/choosefuse.png)
 
 
    
@@ -55,7 +55,7 @@ The Fuse tools are part of the integration pack, that you can install by selecti
 
 To verify you that you have properly installed the tools, click "File->>New->Other" and do a search for "fuse". 
 
-![NewFuse](/images/jbds-install/newfuse.png)
+![NewFuse]({{ site.url }}/images/jbds-install/newfuse.png)
 
 If you have the option to create a new "Fuse" project, you've installed things correctly! WooHoo! If not, yell and kick the instructor (if live) or file an issue in [this git repository][repo]
 
@@ -171,7 +171,7 @@ Parts of this lab will use the PaaS which can use git repos from which to build 
  
 If you navigate over to [http://github.com/join](http://github.com/join), you will be greated with a signup form. Complete the form and create your repo/account:
 
-![github.com](/images/jbds-install/github.png)
+![github.com]({{ site.url }}/images/jbds-install/github.png)
 
 ## <a name="docker"></a>Install Docker and OpenShift on your machine (optional)
 This step is optional. For those folks who will not attend the workshops in person, or for those people who did attend in person and would like to run these labs on their local computer, you have the option to install Docker and OpenShift onto your local machine. Since Docker and Linux run on OpenShift (preferably  RHEL :) ), we'll be using a vagrant + virtualbox set up to run the image. 
