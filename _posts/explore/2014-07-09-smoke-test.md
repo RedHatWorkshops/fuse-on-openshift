@@ -112,13 +112,13 @@ The first screen you will see is the authentication screen.  Enter in the follow
 	Username: your_username   //Replace with your username 
 	Password: your_password   //Replace with your password
     
-![OpenShift 3 Login Screen](http://training.runcloudrun.com/images/roadshow/v3login.png)
+![OpenShift 3 Login Screen]({{ site.url }}/images/explore/login.png)
 
 After you have authenticated to the web console, you will be presented with a
 list of projects that your user has permission to work with. You will see
 something that looks like the following image:
 
-![Web Console](http://training.runcloudrun.com/images/roadshow/webconsole1.png)
+![Web Console]({{ site.url }}/images/explore/projects.png)
 
 Click on the *userXX-smoke* project. When you click on the *userXX-smoke*
 project, you will be taken to the project overview page which will list all of
@@ -126,11 +126,11 @@ the routes, services, deployments, and pods that you have running as part of
 your project.  For this example, you will see a frontend that is deployed to
 two pods.
 
-![Web Console](http://training.runcloudrun.com/images/roadshow/webconsole2.png)
+![Web Console]({{ site.url }}/images/explore/overview.png)
 
 Once you have digested the information on the overview page, click on the Browse tab on the left hand side of the screen:
 
-![Web Console](http://training.runcloudrun.com/images/roadshow/webconsole3.png)
+![Web Console]({{ site.url }}/images/explore/browse.png)
 
 Go ahead and play around a bit more with the web console to get familiar with
 the various tabs and options.  However, we will be using the command line tools

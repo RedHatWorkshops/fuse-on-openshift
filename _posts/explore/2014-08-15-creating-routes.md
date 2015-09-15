@@ -49,8 +49,8 @@ Verify the route was created with the following command:
 
 You can also verify the route by looking at the project in OpenShift web console:
 
-![Route](http://training.runcloudrun.com/images/roadshow/route.png)
+![Route]({{ site.url }}/images/explore/create-routes.png)
 
 Pretty nifty, huh?  This application is now available at the above URL:
 
-![Route](http://training.runcloudrun.com/images/roadshow/route2.png)
+![Route]({{ site.url }}/images/explore/guestbook.png)
