@@ -191,3 +191,13 @@ Following these instructions will have docker and openshift running on the Virtu
 * export `DOCKER_CERT_PATH=`
 
 Note, those are the environment export instructions for linux or MacOSX. For windows you'll need to add them to your environment the way windows does it (I'm really not sure how that is; feel free to PR this documentation to add it. It's probably Config Panel->System but I'm not totally sure :) )
+
+[download]: http://www.jboss.org/products/devstudio/download/
+[repo]: https://github.com/RedHatWorkshops/fuse-on-openshift
+[stash]: https://www.atlassian.com/software/stash
+[gitlab]: https://about.gitlab.com
+[gogs]: http://gogs.io
+[dlvagrant]: https://www.vagrantup.com/downloads.html
+[dlvbox]: https://www.virtualbox.org/wiki/Downloads
+[fabric8]: http://fabric8.io
+[installvm]: http://fabric8.io/guide/getStarted/vagrant.html
