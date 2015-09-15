@@ -3,7 +3,7 @@
   side: left
 
 - title: Getting Started
-  url: "/getting-started/getting-started-with-the-labs/"
+  url: "/fuse/getting-started-with-the-labs/"
   side: left
 
 - title: Live workshop locations
@@ -11,7 +11,7 @@
   side: left
 
 - title: All Labs
-  url: "/labs/"
+  url: "/labs/archive"
   side: left
 
 

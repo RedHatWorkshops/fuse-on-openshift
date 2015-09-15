@@ -7,7 +7,7 @@ breadcrumb: true
 image:
     homepage: openshift_story.jpg
 categories:
-    - explore
+    - fuse
 ---
 
 ### Background: Routes 

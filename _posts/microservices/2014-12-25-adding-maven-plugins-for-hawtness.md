@@ -7,7 +7,7 @@ breadcrumb: true
 image:
     homepage: openshift_story.jpg
 categories:
-    - microservices
+    - fuse
 ---
 
 We mentioned _immutable deployment_ theory in the previous labs and for our microservice project in these sets of labs, we want to be able to package up everything in a single deployment unit with all of the necessary dependencies (java dependencies) and deploy that with a JVM.

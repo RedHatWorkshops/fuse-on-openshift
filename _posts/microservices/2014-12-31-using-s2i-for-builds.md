@@ -7,7 +7,7 @@ breadcrumb: true
 image:
     homepage: openshift_story.jpg
 categories:
-    - microservices
+    - fuse
 ---
 
 To deploy our microservice with OpenShift using s2i, we'll want to first add it to a git repo and let openshift pull the code directly from our github.com repo.

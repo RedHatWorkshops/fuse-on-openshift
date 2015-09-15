@@ -9,7 +9,7 @@ breadcrumb: true
 image:
     homepage: openshift_story.jpg
 categories:
-    - getting-started
+    - fuse
 ---
 
 ## Welcome!

@@ -7,7 +7,7 @@ breadcrumb: true
 image:
     homepage: openshift_story.jpg
 categories:
-    - microservices
+    - fuse
 ---
 
 This lab will walk you through setting up a maven project that we will use to build out our REST-style microservice. We will use an existing maven archetype that assembles a CDI-based Camel java project that we will then alter to implement the service. 
