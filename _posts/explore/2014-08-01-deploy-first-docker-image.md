@@ -13,7 +13,7 @@ categories:
 ### Background: Containers and Pods
 
 Before we start digging in we need to understand how containers and pods are
-related. Given the morning sessions where we discussed the OpenShift platform
+related. Given the content from the workshop and slides we discussed the OpenShift platform
 and how it uses containers and pods, we will not be covering the background on
 these technologies in this lab.  Instead, we will dive right in and start using
 them.
@@ -40,7 +40,6 @@ the *userXX-smoke* Project.
 You should see output similar to the following:
 
     NAME            READY     REASON       RESTARTS   AGE
-    smoke-1-32gkx   1/1       Running      0          11m
     smoke-1-build   0/1       ExitCode:0   0          15m
     smoke-1-fsghf   1/1       Running      0          8m
 
