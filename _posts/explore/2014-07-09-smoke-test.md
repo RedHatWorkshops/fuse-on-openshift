@@ -15,7 +15,6 @@ The first thing we want to do to ensure that our *oc* command line tools was ins
 
 	$ oc login master.fuse.osecloud.com
     
-**Note:** Ensure that you replace *CITYNAME* with the correct hostname / city for your location.  This information was provided to you by the instructor of this workshop.
 
 **Note:** After entering in the above command, you may be prompted to accept the security certificate
 
@@ -31,6 +30,8 @@ workshop, but we did not provide you with the CA certificate that was generated
 by OpenShift. In a real-world scenario, either OpenShift's certificate would be
 signed by a standard CA (eg: Thawte, Verisign, StartSSL, etc.) or signed by a
 corporate-standard CA that you already have installed on your system.
+
+> If you're not attending in person, replace the master.fuse.osecloud.com URI with the path to your local vagrant, or if your VM maps ports to your host, use localhost:8443
 
 **Note:** On some versions of Microsoft Windows, you may get an error that the server has an invalid x.509 certificate.  If you receive this error, enter in the following command:
 
@@ -96,8 +97,8 @@ In order to view the routes for your *userXX-smoke* project, enter in the follow
     
 You should see output similar to the following:
 	
-    NAME      HOST/PORT                                                     PATH      SERVICE   LABELS      TLS TERMINATION
-    smoke     smoke.user36-smoke.cloudapps.chicago.openshift3roadshow.com             smoke     app=smoke 
+    NAME      HOST/PORT                                   PATH      SERVICE   LABELS
+    smoke     smoke.user01-smoke.apps.fuse.osecloud.com             smoke     app=smoke 
 
 ### The Web Console
 

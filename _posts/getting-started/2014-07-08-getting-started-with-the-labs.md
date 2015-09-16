@@ -33,7 +33,7 @@ Stand-alone installer
 
 Once you've downloaded the distribution, you can run the installer by either double-clicking the jar in your file-system explorer, or you can run from the command line (make sure `JAVA_HOME` environment variable is set):
 
-> java -jar jboss-devstudio-8.1.0.GA-installer-standalone.jar
+    java -jar jboss-devstudio-8.1.0.GA-installer-standalone.jar
 
 Follow the on-screen instructions to complete the installations.
 
@@ -61,23 +61,22 @@ If you have the option to create a new "Fuse" project, you've installed things c
 
 ## <a name="os3"></a>Install OpenShift v3 client tools
 
-You will be interacting with an OpenShift environment that is installed on top
-of Amazon's EC2 infrastructure. The OpenShift environment for the road show
+You will be interacting with a public-facing OpenShift environment that is installed on top
+of cloud infrastructure. The OpenShift environment for the workshop
 consists of the following:
 
-* One OpenShift Master
-* One OpenShift Node providing an "infra(structure)" region
-* Five OpenShift Nodes providing the "demo" region
+* One OpenShift Master (which includes the API, router, and registry)
+* Five OpenShift Nodes providing the "workshop" region
 
 The OpenShift Master provides both the API endpoint for the CLI as well as the
 OpenShift web console. It is essentially the only system you will directly
 interact with.
 
-The "infra(structure)" region is where OpenShift's internal Docker registry and
-OpenShift's router are running. The "demo" region is where all of your builds
+The "infra(structure)" region is also running on the master, where OpenShift's internal Docker registry and
+OpenShift's router are running. The "workshop" region is where all of your builds
 and application instances will run. 
 
-This topology of "infra" and "demo" is completely configurable and very advanced
+This topology of "infra" and "workshop" is completely configurable and very advanced
 topologies can be crafted to suit the needs of your organization.
 
 ###**Command Line Interface**
@@ -93,9 +92,9 @@ During this lab, we are going to download the client tool and add them to our op
 
 The first thing we want to do is download the correct executable for your operating system as linked below:
 
-- [Microsoft Windows](http://repo.openshift3roadshow.com/clients/oc-3.0.1.0-windows.zip)
-- [Apple OS X](http://repo.openshift3roadshow.com/clients/oc-3.0.1.0-macosx.tar.gz)
-- [Linux](http://repo.openshift3roadshow.com/clients/oc-3.0.1.0-linux.tar.gz)
+- [Microsoft Windows](https://github.com/openshift/origin/releases/download/v1.0.4/openshift-origin-v1.0.4-757efd9-windows-amd64.zip)
+- [Apple OS X](https://github.com/openshift/origin/releases/download/v1.0.4/openshift-origin-v1.0.4-757efd9-darwin-amd64.tar.gz)
+- [Linux](https://github.com/openshift/origin/releases/download/v1.0.4/openshift-origin-v1.0.4-757efd9-linux-amd64.tar.gz)
 
 
 Once the file has been download, you will need to extract the contents as it is a compressed archive.  I would suggest saving this file to the following directories:
@@ -161,7 +160,7 @@ At this point, we should have the oc tool available for use.  Let's test this ou
 
 You should see the following:
 
-    oc v3.0.1.0-503-g7cc6deb
+    oc v1.0.4
     kubernetes v1.0.0
 
 If you get an error message, you have not updated your path correctly.  If you need help, raise your hand and the instructor will assist.
@@ -176,11 +175,11 @@ If you navigate over to [http://github.com/join](http://github.com/join), you wi
 ## <a name="docker"></a>Install Docker and OpenShift on your machine (optional)
 This step is optional. For those folks who will not attend the workshops in person, or for those people who did attend in person and would like to run these labs on their local computer, you have the option to install Docker and OpenShift onto your local machine. Since Docker and Linux run on OpenShift (preferably  RHEL :) ), we'll be using a vagrant + virtualbox set up to run the image. 
  
-First, you'll need to download and install [vagrant][dlvagrant] and [VirtualBox][dlvbox].
+First, you'll need to download and install [vagrant][dlvagrant], [VirtualBox][dlvbox], and [Docker](https://github.com/docker/docker/releases/tag/v1.6.2).
 
 Then, we'll use the [fabric8.io][fabric8] image of OpenShift which has everything installed, configured, and ready to use out of the box. [Follow the instructions for setting up the OpenShift VM using vagrant from the fabric8 website][installvm]. Raise your hands (in person) or [open a ticket for the github repo][repo] if you have issues getting this installation working correctly.
 
-Following these instructions will have docker and openshift running on the VirtualBox VM that was installed. It would be nice to be able to use the openshift tools (client tools installed from above) and the docker CLI tools directly from your host machine as well. To do this, let's set the following environment variables:
+It would be nice to be able to use the openshift tools (client tools installed from above) and the docker CLI tools directly from your host machine as well. To do this, let's set the following environment variables:
 
 
 * export `KUBERNETES_MASTER=https://172.28.128.4:8443`
@@ -190,7 +189,11 @@ Following these instructions will have docker and openshift running on the Virtu
 * export `DOCKER_TLS_VERIFY=`
 * export `DOCKER_CERT_PATH=`
 
-Note, those are the environment export instructions for linux or MacOSX. For windows you'll need to add them to your environment the way windows does it (I'm really not sure how that is; feel free to PR this documentation to add it. It's probably Config Panel->System but I'm not totally sure :) )
+Lastly, we'll want to install the docker binaries on your local development machine [using the instructions from the Docker website](https://docs.docker.com/installation/binaries/)
+
+Following these instructions will have docker and openshift running on the VirtualBox VM that was installed and have connectivity between your local Docker client and the VM (so you can run Docker from the command line as though it was Native). 
+
+Note, those are the environment export instructions for linux or MacOSX. For windows you'll need to add them to your environment the way windows does it (I'm really not sure how that is; feel free to PR this documentation to add it. It's probably Config Panel->System but I'm not totally sure :) see above for more links for how to configure environment variables for Windows)
 
 [download]: http://www.jboss.org/products/devstudio/download/
 [repo]: https://github.com/RedHatWorkshops/fuse-on-openshift
