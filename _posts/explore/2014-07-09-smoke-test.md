@@ -31,7 +31,7 @@ by OpenShift. In a real-world scenario, either OpenShift's certificate would be
 signed by a standard CA (eg: Thawte, Verisign, StartSSL, etc.) or signed by a
 corporate-standard CA that you already have installed on your system.
 
-> If you're not attending in person, replace the master.fuse.osecloud.com URI with the path to your local vagrant, or if your VM maps ports to your host, use localhost:8443
+> If you're not attending in person, replace the master.fuse.osecloud.com URI with the path to your local vagrant, or if your VM maps ports to your host, use localhost:8443. For example, if using the fabric8 image, try "oc login --server=https://172.28.128.4:8443"
 
 **Note:** On some versions of Microsoft Windows, you may get an error that the server has an invalid x.509 certificate.  If you receive this error, enter in the following command:
 
