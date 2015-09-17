@@ -175,7 +175,7 @@ If you navigate over to [http://github.com/join](http://github.com/join), you wi
 ## <a name="docker"></a>Install Docker and OpenShift on your machine (optional)
 This step is optional. For those folks who will not attend the workshops in person, or for those people who did attend in person and would like to run these labs on their local computer, you have the option to install Docker and OpenShift onto your local machine. Since Docker and Linux run on OpenShift (preferably  RHEL :) ), we'll be using a vagrant + virtualbox set up to run the image. 
  
-First, you'll need to download and install [vagrant][dlvagrant], [VirtualBox][dlvbox], and [Docker](https://github.com/docker/docker/releases/tag/v1.6.2).
+First, you'll need to download and install [vagrant][dlvagrant], [VirtualBox][dlvbox], and [Docker](https://docs.docker.com/installation/binaries/) (you can use the latest version, but the 1.6.2 version on my laptop has been proven to work :) ).
 
 Then, we'll use the [fabric8.io][fabric8] image of OpenShift which has everything installed, configured, and ready to use out of the box. [Follow the instructions for setting up the OpenShift VM using vagrant from the fabric8 website][installvm]. Raise your hands (in person) or [open a ticket for the github repo][repo] if you have issues getting this installation working correctly.
 
