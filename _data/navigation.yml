@@ -13,3 +13,7 @@
 - title: All Labs
   url: "/labs/archive"
   side: left
+
+- title: Free Kubernetes Book
+  url: "http://red.ht/1NGvB4w"
+  side: right
