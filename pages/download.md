@@ -14,4 +14,4 @@ permalink: "/download/"
 * [JBoss Fuse](http://www.jboss.org/products/fuse/download/) -- recommend 6.2
 * [JDK-7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) -- download appropriate for you platform
 * [Git](https://git-scm.com/downloads) -- recommend 1.9.5
-* [Maven](https://maven.apache.org/download.cgi) -- recommend using v3.2.5
+* [Maven](https://maven.apache.org/download.cgi) -- recommend using v3.2.1 or higher

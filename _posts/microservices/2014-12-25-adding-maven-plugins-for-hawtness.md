@@ -18,13 +18,12 @@ Just like in the karaf-based labs, we want to be able to pacakge things up as a 
     <pluginManagement>
     		<plugins>
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>1.2.1</version>
-                    <configuration>
-                        <mainClass>org.apache.camel.cdi.Main</mainClass>
-                        <includePluginDependencies>false</includePluginDependencies>
-                    </configuration>
+                  <groupId>org.jboss.hawt.app</groupId>
+                  <artifactId>hawt-app-maven-plugin</artifactId>
+                  <version>1.2</version>
+                  <configuration>
+                    <main>org.apache.camel.cdi.Main</main>
+                  </configuration>
                 </plugin>
     		</plugins>
     </pluginManagement>

@@ -27,9 +27,9 @@ In the "New Maven project" screen, enter the following into the filter: `io.fabr
 
 Give it the maven coordinates:
 
-groupId: org.openshift.workspace
-artifactId: camel-rest-service
-version: 1.0-SNAPSHOT
+    groupId: org.openshift.workshops
+    artifactId: camel-microservice
+    version: 1.0-SNAPSHOT
 
 
 You should now have a working maven project.
@@ -113,7 +113,7 @@ You should see something like this in the console:
     
 Note, the log line that says the route is bound to port `9091` We can try to hit that URL in our browser or with curl:
 
-    curl -s https://postamac.local:9091
+    curl -s https://ceposta.local:9091/service/sayHello
     
     
 We should see "hello" returned
