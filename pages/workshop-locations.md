@@ -16,7 +16,7 @@ permalink: "/workshop-locations/"
 * Los Angeles -- September 29, 2015 
 * San Jose -- October 6, 2015
 * Montreal -- November 3, 2015
-* Chicago -- December 8, 2015
+* Chicago -- November 5, 2015
 
 
  [1]: {{ site.url }}/documentation/
