@@ -13,7 +13,7 @@ categories:
 
 The first thing we want to do to ensure that our *oc* command line tools was installed and successfully added to our path is login to the OpenShift Enterprise 3.0 environment that has been provided for this Roadshow session.  In order to login, we will use the *oc* command and then specify the server that we want to authenticate to.  Issue the following command:
 
-	$ oc login master.fuse.osecloud.com
+	$ oc login fuse.osecloud.com
     
 
 **Note:** After entering in the above command, you may be prompted to accept the security certificate
@@ -31,11 +31,11 @@ by OpenShift. In a real-world scenario, either OpenShift's certificate would be
 signed by a standard CA (eg: Thawte, Verisign, StartSSL, etc.) or signed by a
 corporate-standard CA that you already have installed on your system.
 
-> If you're not attending in person, replace the master.fuse.osecloud.com URI with the path to your local vagrant, or if your VM maps ports to your host, use localhost:8443. For example, if using the fabric8 image, try "oc login --server=https://172.28.128.4:8443"
+> If you're not attending in person, replace the fuse.osecloud.com URI with the path to your local vagrant, or if your VM maps ports to your host, use localhost:8443. For example, if using the fabric8 image, try "oc login --server=https://172.28.128.4:8443"
 
 **Note:** On some versions of Microsoft Windows, you may get an error that the server has an invalid x.509 certificate.  If you receive this error, enter in the following command:
 
-	$ oc login master.fuse.osecloud.com --insecure-skip-tls-verify=true
+	$ oc login fuse.osecloud.com --insecure-skip-tls-verify=true
     
 Once you issue the *oc login* command, you will be prompted for the username and password combination for your user account.  This information was provided to you by the instructor of this workshop:
 
@@ -83,7 +83,7 @@ can do this with the following command:
    
 You will see the following confirmation message:
 
-	Now using project "userXX-smoke" on server "https://master.fuse.osecloud.com:8443".
+	Now using project "userXX-smoke" on server "https://fuse.osecloud.com:8443".
 
 The next thing we want to check is the routes associated with this project. A simple explanation for how routes work is:
 1. A request comes in to an OpenShift node on port 80 (HTTP) or 443 (HTTPS)
@@ -106,7 +106,7 @@ OpenShift Enterprise 3 ships with a web-based console that will allow users to
 perform various tasks via a browser.  To get a feel for how the web console
 works, open your browser and go to the following URL:
 
-	https://master.fuse.osecloud.com:8443
+	https://fuse.osecloud.com:8443
 
 The first screen you will see is the authentication screen.  Enter in the following credentials:
 
