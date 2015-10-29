@@ -1,8 +1,8 @@
 ---
 layout: page-fullwidth
 title: Use OpenShift to deploy Fuse
-subheadline: "Camel in the clouds"
-teaser: "Let's use OpenShift templates and instant-app builders to deploy our Fuse application"
+subheadline: "fuse"
+teaser: "Let's use OpenShift source 2 image builders to deploy our Fuse application"
 breadcrumb: true
 image:
     homepage: openshift_story.jpg
@@ -10,33 +10,19 @@ categories:
     - fuse
 ---
 
-From the command line, let's import that instant-app template (substitute the correct URL for your git repo)
+From the command line, let's create our project using s2i (source 2 image) builders. Recall from the previous labs,
+s2i allows us to build our projects directly from source without have to know how to build the docker images and 
+start/stop containers, etc. 
 
-    curl -s -L https://raw.githubusercontent.com/christian-posta/camel-hello-world/master/os3-app-template.json | oc create -f -
+    oc new-app --strategy=source fabric8/s2i-karaf:1.1.5~https://github.com/<YOUR-REPO>/camel-hello-world 
     
 Now, we can create a new app with the command-line, or the web console. For this lab, let's use the webconsole.
 
 Navigate to the console, and login (the URL will be provided for the in-person workshop, otherwise if you have it running locally on your laptop it will be `https://vagrant.f8:8443` if you've set up the [fabric8.io](http://fabric8.io) vagrant image.
 
-Click on the "Add to Project" button:
-
-![add to project]({{ site.url }}/images/fuse/addtoproject.png)
 
 
-We should now see a list of templates and instant apps. Select the fuse instant app to continue deploying our fuse app:
-
-![insta-app]({{ site.url }}/images/fuse/instantapp.png)
-
-Yay! Now we can edit some variables, like the git repo, and the name of the project if you wish. Click the "edit" link:
-
-![insta-app]({{ site.url }}/images/fuse/editparams.png)
-
-
-And now click create!
-
-![insta-app]({{ site.url }}/images/fuse/create.png)
-
-Now, off to the left, find the "Browse" icon and click it. You may need to click on "Pods" as well if that's not the default page that shows up. You should see a builder pod building the newly created `camel-hello-world` instant app:
+Off to the left, find the "Browse" icon and click it. You should see a list of services running including the new build that's running inside of a Kubernetes pod.
 
 ![insta-app]({{ site.url }}/images/fuse/buildrunning.png)
 

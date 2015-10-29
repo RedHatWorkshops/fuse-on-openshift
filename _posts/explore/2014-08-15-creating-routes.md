@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Creating routes
-subheadline: "Access your applications"
+subheadline: "explore"
 teaser: "Test out creating routes in OpenShift to be able to access your applications"
 breadcrumb: true
 image:

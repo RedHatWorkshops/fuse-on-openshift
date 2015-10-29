@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Smoke Test
-subheadline: "Try to connect!"
+subheadline: "explore"
 teaser: "Once you have the tools installed, let's make sure they work correctly with the workshop environment"
 breadcrumb: true
 image:

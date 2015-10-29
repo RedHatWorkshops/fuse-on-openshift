@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Exploring the flexible deployment options of Fuse on OpenShift
-subheadline: "Let's deploy!"
+subheadline: "fuse"
 teaser: "Fuse on OpenShift has many deployment options and you're welcome to select the best for your environment. In this lab, we'll explore some of those deployment options and discuss which may be right for you"
 breadcrumb: true
 image:
@@ -42,6 +42,8 @@ You can also specify a specific docker image like this:
 
     oc new-app mysql
     
+But how do you go about creating the `Dockerfile` that describes your application? And how do you version it and manage that in terms of your application source code? We also have an option to use a [maven docker plugin](https://github.com/rhuss/docker-maven-plugin/blob/master/README.md) that allows us to tie our builds and application source code to the docker image that gets created. 
+    
 ## From a template
 You can also create re-usable templates with parameters that can be substituted at deploy time. For example, you could create a template for you application that specifies docker images, service, replication controllers, and pods and then parametrize the values that are specific for certain environment deploys (DEV, QA, PROD, etc) and then move entire sets of artifacts consistently and atomically. 
 
@@ -53,7 +55,6 @@ An instant app is a special type of template that is a bit more generic and allo
 * node.js
 * Cake (PHP)
 
-For this lab, we already have an instant app builder declared in our `camel-hello-world` repository named `os3-app-template.json`
 
 In the next lab, we'll deploy this app!
 

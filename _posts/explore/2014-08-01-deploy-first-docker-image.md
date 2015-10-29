@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Deploy your first docker image
-subheadline: "Dockah Dockah Dockah!"
+subheadline: "explore"
 teaser: "Let's try to deploy a docker image with OpenShift"
 breadcrumb: true
 image:

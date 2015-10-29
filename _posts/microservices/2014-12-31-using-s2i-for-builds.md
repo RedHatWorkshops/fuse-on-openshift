@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Leveraging OpenShift to deploy and scale our microservice
-subheadline: "OpenShift is a natural place for microservices!"
+subheadline: "microservices"
 teaser: "In this lab, we'll deploy our microservices using OpenShift S2i builders"
 breadcrumb: true
 image:

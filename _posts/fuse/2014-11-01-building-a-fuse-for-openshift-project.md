@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Building a Fuse project
-subheadline: "Building a Fuse project!"
+subheadline: "fuse"
 teaser: "Fuse takes advantage of typical Java tooling to maintain it's lifecycle. In this lab, we'll walk you through building a Fuse project and explore the outputs."
 breadcrumb: true
 image:
@@ -21,7 +21,13 @@ Upon closer inspection, we see that this project is a typical Fuse project inten
       <name>Camel Hello World</name>
       <description>Camel Hello World in custom Karaf4 assembly</description>
       
-The `<packaging>` type is bundle, which means we'll be building an OSGI bundle when we run `mvn install`. From the command line at the root of the project we can see that indeed that's what we've built:
+The `<packaging>` type is bundle, which means we'll be building an OSGI bundle when we run `mvn install`. 
+
+Try buildin the project:
+
+    mvn clean install
+    
+From the command line at the root of the project we can see that indeed that's what we've built:
 
     ceposta@postamac(camel-hello-world (master)) $ unzip -c target/camel-hello-world.jar META-INF/MANIFEST.MF
     Archive:  target/camel-hello-world.jar
@@ -66,42 +72,60 @@ We've run `mvn install` but as we just discussed, that builds us just the Java a
 
 Let me introduce you to the [Karaf maven plugin][karaf-plugin]. Don't get confused with the [Felix maven plugin][felix-plugin] (which generates the bundle), the [Karaf plugin][karaf-plugin] allows us the generate a fully built Karaf-based distribution with our service/app embedded.
 
-Poke around at the `pom.xml` (in XML mode in JBDS) and find the `karaf-assemble` mvn profile:
+Poke around at the `pom.xml` (in XML mode in JBDS) and find the `<build> section` and find this build plugin:
 
-        <profile>
-          <id>karaf-assemble</id>
-          <build>
-            <plugins>
-              <!-- karaf-maven-plugin creates custom microservice distribution -->
-              <plugin>
-                <groupId>org.apache.karaf.tooling</groupId>
-                <artifactId>karaf-maven-plugin</artifactId>
-                <executions>
-                  <execution>
-                    <id>karaf-assembly</id>
-                    <goals>
-                      <goal>assembly</goal>
-                    </goals>
-                    <phase>prepare-package</phase>
-                  </execution>
-                  <execution>
-                    <id>karaf-archive</id>
-                    <goals>
-                      <goal>archive</goal>
-                    </goals>
-                    <phase>package</phase>
-                  </execution>
-                </executions>
-              </plugin>
-            </plugins>
-          </build>
-        </profile>
-        
-Now if we run `mvn install` with the `-Pkaraf-assemble` profile enabled, we should see a fully-built distro of Karaf/Fuse with our application built and deployed as an embedded service:
-
-    mvn clean install -Pkaraf-assemble
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>karaf-maven-plugin</artifactId>
+        <version>${karaf.plugin.version}</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <id>karaf-assembly</id>
+            <goals>
+              <goal>assembly</goal>
+            </goals>
+            <phase>install</phase>
+          </execution>
+          <execution>
+            <id>karaf-archive</id>
+            <goals>
+              <goal>archive</goal>
+            </goals>
+            <phase>install</phase>
+          </execution>
+        </executions>
+        <configuration>
+          <!-- do not include build output directory -->
+          <karafVersion>v24</karafVersion>
+          <useReferenceUrls>true</useReferenceUrls>
+          <includeBuildOutputDirectory>false</includeBuildOutputDirectory>
+          <!-- no startupFeatures -->
+          <startupFeatures>
+            <feature>karaf-framework</feature>
+            <feature>shell</feature>
+            <feature>jaas</feature>
+            <feature>aries-blueprint</feature>
+            <feature>camel-blueprint</feature>
+          </startupFeatures>
+          <startupBundles>
+            <bundle>mvn:${project.groupId}/${project.artifactId}/${project.version}</bundle>
+          </startupBundles>
+          <blacklistedBundles>
+            <bundle>mvn:org.ops4j.pax.logging/pax-logging-api/1.8.4</bundle>
+            <bundle>mvn:org.ops4j.pax.logging/pax-logging-service/1.8.4</bundle>
+          </blacklistedBundles>
+          <libraries>
+            <library>
+              mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.boot/${karaf.version};type:=boot;export:=true;delegate:=true
+            </library>
+          </libraries>
+        </configuration>
+      </plugin>
+      
+This plugin snippet, declared as a maven plugin configuration, tells the [Karaf maven pluing][karaf-plugin] what to include inside of the Karaf distro. Notice that we can deploy `<startupFeatures>` which control the features  which get started automatically (instead of the features karaf config file we all know and love). Lastly, note, we're specifically including our project as a bundle at startup time. To test this, let's look at what was built:
     
-Now take a look at the `./target` folder and you see the following:
+Take a look at the `./target` folder and you see the following:
 
     ceposta@postamac(camel-hello-world (master)) $ ll target/
      total 48728
@@ -114,40 +138,7 @@ Now take a look at the `./target` folder and you see the following:
      
 The entire immutable distro of Karaf (camel-hello-world-1.0-SNAPSHOT.tar.gz or the .zip variety) has been produced! You can now take this and deply it with our service already embedded and configured!
     
-## How to configure the Immutable Karaf distro
 
-If you take a look at the `<pluginManagement>` section of the `pom.xml` you'll see the following:
-
-           <plugin>
-              <groupId>org.apache.karaf.tooling</groupId>
-              <artifactId>karaf-maven-plugin</artifactId>
-              <version>${karaf.plugin.version}</version>
-              <extensions>true</extensions>
-              <configuration>
-                <!-- do not include build output directory -->
-                <includeBuildOutputDirectory>false</includeBuildOutputDirectory>
-                <!-- no startupFeatures -->
-                <bootFeatures>
-                  <feature>jaas</feature>
-                  <feature>management</feature>
-                  <feature>log</feature>
-                  <feature>system</feature>
-                  <feature>aries-blueprint</feature>
-    <!-- commented because it pulls in bundles like camel-commands, which should be optional
-                  <feature>camel-core</feature>
-                  <feature>camel-blueprint</feature>
-    -->
-                </bootFeatures>
-                <bootBundles>
-                  <bootBundle>mvn:org.apache.camel/camel-core/${camel.version}</bootBundle>
-                  <bootBundle>mvn:org.apache.camel/camel-catalog/${camel.version}</bootBundle>
-                  <bootBundle>mvn:org.apache.camel/camel-blueprint/${camel.version}</bootBundle>
-                  <bundle>mvn:${project.groupId}/${project.artifactId}/${project.version}</bundle>
-                </bootBundles>
-              </configuration>
-            </plugin>
-            
-This plugin snippet, declared as a maven plugin configuration, tells the [Karaf maven pluing][karaf-plugin] what to include inside of the Karaf distro. Notice that we can deploy `<bootFeatures>` which control the boot features (instead of the features karaf config file we all know and love). Lastly, note, we're specifically including our project as a bundle at boot time.
 
 ## What about Docker?
 Well, I'm glad you asked. Because this maven `pom.xml` also includes plugins for generating a docker image based on some of this config. But let's not get too ahead of ourselves, because using OpenShift we may not even need to worry about this. However, this paradigm is _very_ useful for developers and differentiates how we can use Fuse/Microservices on our local-developer boxes using Docker and expect the same behavior from our PaaS. This is a notable difference from competitors that don't allow deploying native docker... some fumbling foundry crap :) .. they'll come along one day... they've [already listened to our advice on some things](https://blog.openshift.com/chose-not-join-cloud-foundry-foundation-recommendations-2015/) :)

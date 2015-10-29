@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: Install OpenShift Locally (Optional)
-subheadline: "Get OpenShift Origin working on your machine!"
+subheadline: "optional"
 teaser: "For the onsite workshop, use the environment set up by the instructor. If you'd like to do these labs and further explore openshift outside of the workshop (ie, locally, on your laptop), follow these instructions"
 breadcrumb: true
 categories:
