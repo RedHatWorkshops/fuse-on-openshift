@@ -28,13 +28,13 @@ In the "New Maven project" screen, enter the following into the filter: `io.fabr
 Give it the maven coordinates:
 
     groupId: org.openshift.workshops
-    artifactId: camel-microservice
+    artifactId: camel-rest-workshop
     version: 1.0-SNAPSHOT
 
 
 You should now have a working maven project.
 
-> to create the project from the command line type in this command: `mvn archetype:generate -DarchetypeGroupId=io.fabric8.archetypes -DarchetypeArtifactId=java-camel-cdi-archetype -Dversion=2.2.28 -DgroupId=org.openshift.workshops -DartifactId=camel-microservice -Dversion=1.0-SNAPSHOT`
+> to create the project from the command line type in this command: `mvn archetype:generate -DarchetypeGroupId=io.fabric8.archetypes -DarchetypeArtifactId=java-camel-cdi-archetype -Dversion=2.2.28 -DgroupId=org.openshift.workshops -DartifactId=camel-rest-workshop -Dversion=1.0-SNAPSHOT`
 
 Yay! now we have a maven project that we can use as the base for our project. If you take a look at the pom.xml, you'll see some interesting plugins and configurations including for the `docker maven plugin`. If you have Docker installed on your local machine (this is an optional step), you could run `mvn clean install docker:build` and this will build a docker image from the project. But since we're using OpenShift, you can use Docker natively on your box, but you can also deploy directly using [S2I](https://docs.openshift.org/latest/dev_guide/new_app.html#specifying-source-code).
 

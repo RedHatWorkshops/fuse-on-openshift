@@ -12,7 +12,7 @@ categories:
 
 To deploy our microservice with OpenShift using s2i, we'll want to first add it to a git repo and let openshift pull the code directly from our github.com repo.
 
-First, create a new repo in github.com called "camel-microservice"
+First, create a new repo in github.com called "camel-rest-workshop"
 
 ![Create project]({{ site.url }}/images/microservices/newgithubproject.png)
 ![Import code]({{ site.url }}/images/microservices/howtoimportgithub.png)
@@ -33,7 +33,7 @@ Now let's add the new .gitignore file and add all the rest of the files:
     
 Now let's push this repo up to github.com:
 
-    git remote add origin git@github.com:christian-posta/camel-microservice.git
+    git remote add origin git@github.com:christian-posta/camel-rest-workshop.git
     git push -u origin master
     
 Now if we navigate to our repo in the browser, we should see our source code. 
@@ -42,5 +42,5 @@ To deploy our microservice, we can now use the `oc new-app` command and point to
 
 Make sure you're logged in to an OpenShift instance with the `oc` tool. See the previous labs for help with that.
 
-    oc new-app --strategy=source dhirajsb/fuse-sti~https://github.com/christian-posta/camel-microservice
+    oc new-app --strategy=source fabric8/s2i-java:1.1.5~https://github.com/christian-posta/camel-rest-workshop
 
