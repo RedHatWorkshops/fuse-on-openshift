@@ -117,6 +117,11 @@ You will see output similar to the following:
 
 Pretty easy, huh?
 
+If a build doesn't kick off automatically, let's start one:
+
+    oc deploy guestbook
+
+
 This may take a while to complete depending on whether you are the first or last
 student to create your "application". Each OpenShift node has to pull (download)
 the Docker image for kubernetes/guestbook from the Docker hub if it does not
