@@ -14,7 +14,7 @@ widget1:
   text: 'OpenShift v3 is a developer PaaS built on popular open-source communities like <a href="https://docker.io">Docker</a> and <a href="http://kubernetes.io">Kubernetes</a> that makes it easy to deploy cloud-native apps and microservices using container technology'
 widget2:
   title: "JBoss Fuse"
-  url: 'http://phlow.github.io/feeling-responsive/info/'
+  url: 'http://www.jboss.org/products/fuse/overview/'
   text: 'JBoss Fuse is a lightweight integration platform built on top of popular open-source technology like <a href="http://activemq.apache.org">Apache ActiveMQ</a> and <a href="http://camel.apache.org">Apache Camel</a> that brings powerful integration capabilities to your apps whether deployed as cloud-native microserivces or traditional apps'
   image: 'fuse.png'
 widget3:
